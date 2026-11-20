@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Faisal Bin Zaman — AI Engineer in Dhaka building autonomous agents, RAG pipelines and computer-vision models.">
+  <meta name="theme-color" content="#05070d">
+  <title>Faisal Bin Zaman — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600&family=Red+Hat+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas class="motes" aria-hidden="true"></canvas>
+  <div class="fog" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="logo">faisal bin zaman</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO / SKILL MAP ===== -->
+    <section id="home" class="hero container">
+      <div class="hero-copy">
+        <h1 class="hero-name">Faisal<br>Bin Zaman</h1>
+        <p class="hero-role">AI Engineer. I build intelligent systems.</p>
+        <p class="hero-tagline">
+          Machine-learning products end to end — from data pipelines and model
+          training to LLM-powered applications in production.
+        </p>
+        <div class="hero-cta">
+          <a href="mailto:zihanfaisal@gmail.com" class="btn btn-lit">
+            <svg class="cube-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2.8 20 7v10l-8 4.2L4 17V7l8-4.2Z"/><path d="M4 7l8 4.2L20 7M12 11.2v10"/></svg>
+            Email Faisal
+          </a>
+          <a href="#projects" class="btn btn-quiet">See the work</a>
+        </div>
+      </div>
+
+      <div class="stage" id="skills" aria-label="Skill map">
+        <h2 class="visually-hidden">Skills</h2>
+        <div class="room">
+          <div class="floor" aria-hidden="true"><div class="floor-lit"></div></div>
+          <svg class="orbit-ring" aria-hidden="true"><ellipse /></svg>
+          <div class="towers" role="group" aria-label="Choose a skill stack">
+            <button class="tower" data-skill="ml" style="--x: 0%; --z: -90px;" aria-pressed="false">
+              <span class="glass" aria-hidden="true"><i class="f"><canvas class="dust"></canvas><i class="core"></i></i><i class="s"></i><i class="t"></i></span>
+              <span class="tower-name">AI / ML</span>
+            </button>
+            <button class="tower" data-skill="llm" style="--x: 25%; --z: 0px;" aria-pressed="true">
+              <span class="glass" aria-hidden="true"><i class="f"><canvas class="dust"></canvas><i class="core"></i></i><i class="s"></i><i class="t"></i></span>
+              <span class="tower-name">LLM Stack</span>
+            </button>
+            <button class="tower" data-skill="lang" style="--x: 50%; --z: -180px;" aria-pressed="false">
+              <span class="glass" aria-hidden="true"><i class="f"><canvas class="dust"></canvas><i class="core"></i></i><i class="s"></i><i class="t"></i></span>
+              <span class="tower-name">Languages</span>
+            </button>
+            <button class="tower" data-skill="infra" style="--x: 74%; --z: -60px;" aria-pressed="false">
+              <span class="glass" aria-hidden="true"><i class="f"><canvas class="dust"></canvas><i class="core"></i></i><i class="s"></i><i class="t"></i></span>
+              <span class="tower-name">Tools &amp; Infra</span>
+            </button>
+          </div>
+          <div class="orbit" aria-label="Projects built on the selected stack"></div>
+          <p class="stage-key">Tower height = projects built on that stack</p>
+        </div>
+
+        <div class="readouts" aria-live="polite">
+          <div class="readout" data-for="ml" hidden>
+            <p class="readout-title">AI / ML</p>
+            <ul class="readout-tools"><li>PyTorch · TensorFlow</li><li>YOLO11</li><li>scikit-learn</li><li>Transformers</li><li>Computer vision</li><li>NLP · spaCy · NLTK</li></ul>
+            <p class="readout-proof">Proven in <a href="#p-skin">Skin Lesion Classifier</a>, <a href="#p-bukhari">BukhariRAG</a>, <a href="#p-health">Health Chatbot</a></p>
+          </div>
+          <div class="readout" data-for="llm">
+            <p class="readout-title">LLM Stack</p>
+            <ul class="readout-tools"><li>Multi-agent orchestration</li><li>MCP</li><li>LangChain · LangGraph</li><li>RAG · hybrid search · reranking</li><li>Vector DBs · Weaviate · Chroma</li><li>Ollama · Llama 3.2 · Qwen3</li><li>Fine-tuning</li></ul>
+            <p class="readout-proof">Proven in <a href="#p-marketing">Marketing Agent</a>, <a href="#p-bukhari">BukhariRAG</a>, <a href="#p-rag">RAG ChatBot</a>, <a href="#p-health">Health Chatbot</a></p>
+          </div>
+          <div class="readout" data-for="lang" hidden>
+            <p class="readout-title">Languages</p>
+            <ul class="readout-tools"><li>Python</li><li>JavaScript / TypeScript</li><li>Java</li><li>SQL</li><li>C++</li></ul>
+            <p class="readout-proof">Proven in <a href="#p-bukhari">BukhariRAG</a>, <a href="#p-skin">Skin Lesion Classifier</a>, <a href="#p-rag">RAG ChatBot</a>, <a href="#p-health">Health Chatbot</a>, <a href="#p-medicore">MediCore</a></p>
+          </div>
+          <div class="readout" data-for="infra" hidden>
+            <p class="readout-title">Tools &amp; Infra</p>
+            <ul class="readout-tools"><li>Docker</li><li>Git</li><li>Gradio</li><li>AWS</li><li>FastAPI</li><li>Flutter</li><li>Linux</li></ul>
+            <p class="readout-proof">Proven in <a href="#p-marketing">Marketing Agent</a>, <a href="#p-rag">RAG ChatBot</a>, <a href="#p-health">Health Chatbot</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section container reveal">
+      <h2 class="section-title">Building agents that do real work</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm an AI engineer at Ideeza. I built a marketing agent that runs
+            the company's marketing on its own: a root orchestrator controls
+            specialist agents, and a person only reviews posts before they go
+            out. I also built Ideeza's vector database on Weaviate.
+          </p>
+          <p>
+            Outside work I build across the ML stack: a YOLO11 skin-lesion
+            classifier trained on 29.6k images, BukhariRAG for Bangla hadith
+            search, a RAG chatbot on LangChain, LangGraph and Chroma, and
+            assistants running Llama 3.2 locally through Ollama. I care about
+            evaluating a system honestly, not only demoing it.
+          </p>
+        </div>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
+          <div><dt>Role</dt><dd>AI Engineer at Ideeza</dd></div>
+          <div><dt>Focus</dt><dd>Autonomous agents · RAG · Computer vision</dd></div>
+          <div><dt>Open to</dt><dd>Collaborations &amp; roles</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section container reveal">
+      <h2 class="section-title">Projects, and the skills they stand on</h2>
+      <div class="projects-layout">
+        <div class="minimap" aria-hidden="true">
+          <div class="mini" data-skill="ml"><span class="glass"><i class="f"><canvas class="dust"></canvas></i><i class="s"></i><i class="t"></i></span><span class="mini-name">AI / ML</span></div>
+          <div class="mini" data-skill="llm"><span class="glass"><i class="f"><canvas class="dust"></canvas></i><i class="s"></i><i class="t"></i></span><span class="mini-name">LLM</span></div>
+          <div class="mini" data-skill="lang"><span class="glass"><i class="f"><canvas class="dust"></canvas></i><i class="s"></i><i class="t"></i></span><span class="mini-name">Lang</span></div>
+          <div class="mini" data-skill="infra"><span class="glass"><i class="f"><canvas class="dust"></canvas></i><i class="s"></i><i class="t"></i></span><span class="mini-name">Infra</span></div>
+        </div>
+
+        <div class="projects">
+          <article class="project" id="p-marketing" data-skills="llm infra" tabindex="-1">
+            <div class="project-head">
+              <h3>Marketing Agent</h3>
+              <span class="project-where">Built at Ideeza</span>
+            </div>
+            <p>An agent that runs the company's marketing on its own. A root orchestrator agent controls a team of specialist agents, connects to the competition databases, and gets its knowledge over MCP. A person only reviews before anything is posted; the rest of the system runs automatically.</p>
+            <ul class="agents" aria-label="Agents under the orchestrator"><li>Lead generation</li><li>Reply drafting</li><li>Fraud checker</li><li>Social media checker</li><li>Build tracker</li><li>Leaderboard</li></ul>
+            <ul class="tags mono"><li>Orchestrator agent</li><li>MCP</li><li>Database integrations</li><li>Human review before posting</li></ul>
+          </article>
+
+          <article class="project" id="p-bukhari" data-skills="ml llm lang" tabindex="-1">
+            <div class="project-head">
+              <h3>BukhariRAG</h3>
+              <span class="project-where">Personal project</span>
+            </div>
+            <p>Question answering over 4,036 scanned pages of the Bangla Sahih Bukhari. A Bangla OCR stage and a parser turn the scans into checked hadith records; retrieval mixes multilingual-e5 embeddings in Chroma with BM25, fuses them with Reciprocal Rank Fusion and reranks with a cross-encoder; Qwen3-8B answers in 4-bit. Every answer cites its hadith number and page, and low-confidence questions are declined.</p>
+            <ul class="tags mono"><li>Bangla OCR</li><li>Hybrid retrieval</li><li>ChromaDB</li><li>Qwen3-8B</li><li>Recall@k · MRR eval</li></ul>
+          </article>
+
+          <article class="project" id="p-skin" data-skills="ml lang" tabindex="-1">
+            <div class="project-head">
+              <h3>Skin Lesion Classifier</h3>
+              <div class="project-links">
+                <a href="https://github.com/Faisal4119/skin_disease_lesion_yolo11" target="_blank" rel="noopener" aria-label="Skin Lesion Classifier on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.7 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+              </div>
+            </div>
+            <p>Two YOLO11 models read the same skin photo: one names the condition across 27 diseases, the other flags it benign, malignant or non-neoplastic. Trained on 29.6k images from four public datasets, with near-duplicates removed by perceptual hashing and patient-aware splits to stop train–test leakage. 92% top-1 and 0.81 malignant recall on the malignancy test set; 63.6% top-1 across the 27 diseases. A webcam app runs both models at 52 FPS on an RTX 4060 and abstains when unsure.</p>
+            <ul class="tags mono"><li>Python</li><li>YOLO11</li><li>PyTorch</li><li>OpenCV</li><li>Computer Vision</li></ul>
+          </article>
+
+          <article class="project" id="p-rag" data-skills="llm lang infra" tabindex="-1">
+            <div class="project-head">
+              <h3>RAG ChatBot</h3>
+              <div class="project-links">
+                <a href="https://github.com/Faisal4119/RAG_ChatBot" target="_blank" rel="noopener" aria-label="RAG ChatBot on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.7 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+              </div>
+            </div>
+            <p>A chatbot that answers questions about North South University's ECE department. Built on LangChain and LangGraph: documents are split and embedded into a Chroma vector database, retrieved by similarity, and answered by a locally hosted Llama 3.2 through Ollama.</p>
+            <ul class="tags mono"><li>LangChain</li><li>LangGraph</li><li>Chroma vector DB</li><li>Ollama · Llama 3.2</li><li>Gradio</li></ul>
+          </article>
+
+          <article class="project" id="p-health" data-skills="ml llm lang infra" tabindex="-1">
+            <div class="project-head">
+              <h3>Health Chatbot</h3>
+              <div class="project-links">
+                <a href="https://github.com/Faisal4119/Health-Chatbot" target="_blank" rel="noopener" aria-label="Health Chatbot on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.7 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+              </div>
+            </div>
+            <p>A health-information chatbot: spaCy and NLTK clean up the question, Llama 3.2 on a Docker-hosted Ollama API answers it, and responses stream into a Gradio chat.</p>
+            <ul class="tags mono"><li>Python</li><li>spaCy · NLTK</li><li>Ollama</li><li>Docker</li></ul>
+          </article>
+
+          <article class="project" id="p-medicore" data-skills="lang" tabindex="-1">
+            <div class="project-head">
+              <h3>MediCore</h3>
+              <div class="project-links">
+                <a href="https://github.com/Faisal4119/medicore-hospital-management" target="_blank" rel="noopener" aria-label="MediCore on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.7 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+              </div>
+            </div>
+            <p>A JavaFX hospital management system for patients, doctors, staff, appointments, prescriptions, lab reports and billing, built around clean object-oriented design.</p>
+            <ul class="tags mono"><li>Java</li><li>JavaFX</li><li>OOP</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section container reveal">
+      <h2 class="section-title">Experience</h2>
+      <div class="role">
+        <div class="tenure" aria-hidden="true">
+          <ol class="ticks mono"><li>now</li><li>2026</li><li>2025</li><li>2024</li></ol>
+          <span class="glass"><i class="f"><canvas class="dust"></canvas></i><i class="s"></i><i class="t"></i></span>
+        </div>
+        <div class="role-text">
+          <h3>AI Engineer · Ideeza <span class="role-date mono">Jul 2024 — Present · Remote</span></h3>
+          <ul class="role-work">
+            <li><strong>Marketing Agent.</strong> Runs Ideeza's marketing automatically: a root orchestrator agent controls specialist agents for lead generation, reply drafting, fraud and social-media checks, build tracking and leaderboards, with knowledge connected over MCP and a person reviewing only before posting.</li>
+            <li><strong>Agentic Product Design.</strong> A multi-agent workflow that takes a product idea through component selection, circuit connections, firmware and a companion Android app. Built an Electrical Rule Check engine with the electronics engineers to validate the generated designs.</li>
+            <li><strong>Datasheet Search.</strong> Ideeza's vector database on Weaviate: a pipeline parses, chunks, embeds and indexes component datasheet PDFs, and a FastAPI service serves semantic search to other apps.</li>
+            <li><strong>Automated Connection System.</strong> An LLM-assisted pipeline that picks parts from the internal database, works out how they connect, and returns consistent JSON specs for downstream tools.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Education</h3>
+      <dl class="facts edu">
+        <div><dt class="mono">2018 — 2026</dt><dd>B.Sc. in Computer Science &amp; Engineering<span>North South University · expected 2026</span></dd></div>
+        <div><dt class="mono">2014 — 2016</dt><dd>Higher Secondary Certificate<span>Dhaka Residential Model College · GPA 5.00</span></dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section container reveal contact">
+      <span class="glass beacon is-amber" aria-hidden="true"><i class="f"><canvas class="dust"></canvas><i class="core"></i></i><i class="s"></i><i class="t"></i></span>
+      <h2 class="contact-title">Interested in working together, or want to talk AI?</h2>
+      <p class="contact-text">My inbox is open — roles, projects, or a question about your model.</p>
+      <a href="mailto:zihanfaisal@gmail.com" class="btn btn-lit btn-large">
+        <svg class="cube-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2.8 20 7v10l-8 4.2L4 17V7l8-4.2Z"/><path d="M4 7l8 4.2L20 7M12 11.2v10"/></svg>
+        zihanfaisal@gmail.com
+      </a>
+      <p class="contact-info">
+        <a href="tel:+8801303367431">+880 1303-367431</a>
+        <a href="https://github.com/Faisal4119" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/faisal-bin-zaman-5b3264135/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>Designed &amp; built by Faisal Bin Zaman · © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
